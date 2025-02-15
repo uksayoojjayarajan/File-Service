@@ -1,4 +1,4 @@
-package com.example.FileService;
+package com.filemanagement.fileservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

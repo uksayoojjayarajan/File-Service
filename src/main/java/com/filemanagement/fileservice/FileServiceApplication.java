@@ -1,4 +1,4 @@
-package com.example.FileService;
+package com.filemanagement.fileservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
