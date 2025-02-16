@@ -4,7 +4,7 @@ import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.filemanagement.fileservice.data.model.FileProjection;
-import com.filemanagement.fileservice.data.repository.FileQueryRepository;
+import com.filemanagement.fileservice.data.elasticSearch.repository.FileQueryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

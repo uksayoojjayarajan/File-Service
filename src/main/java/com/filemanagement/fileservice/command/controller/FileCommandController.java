@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -38,8 +39,8 @@ public class FileCommandController {
                     .fileSize(file.getSize())
                     .userId(userId)
                     .fileUrl("")
-                    .dateCreated(LocalDate.now())
-                    .dateUpdated(LocalDate.now())
+                    .dateCreated(LocalDateTime.now())
+                    .dateUpdated(LocalDateTime.now())
                     .build();
 
             fileCommandService.uploadFile(uploadFileCommand, file);
@@ -56,7 +57,7 @@ public class FileCommandController {
             @RequestParam String fileName,
             @RequestParam String fileType) {
 
-        UpdateFileMetadataCommand command = new UpdateFileMetadataCommand(fileId, fileName, fileType, LocalDate.now());
+        UpdateFileMetadataCommand command = new UpdateFileMetadataCommand(fileId, fileName, fileType, LocalDateTime.now());
         return fileCommandService.updateFileMetadata(command)
                 .thenApply(result -> ResponseEntity.ok("File metadata updated successfully"));
     }

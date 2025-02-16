@@ -1,6 +1,6 @@
 package com.filemanagement.fileservice.query.controller;
 
-import com.filemanagement.fileservice.data.repository.FileQueryRepository;
+import com.filemanagement.fileservice.data.elasticSearch.repository.FileQueryRepository;
 import com.filemanagement.fileservice.data.model.FileProjection;
 import com.filemanagement.fileservice.query.service.FileQueryService;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ public class FileQueryController {
         return fileQueryService.getFile(fileId);
     }
 
-    @GetMapping("/search")
+    @GetMapping("/searchAll")
     public ResponseEntity<List<FileProjection>> GetAllFiles() {
       return ResponseEntity.ok(fileQueryService.getAllFiles());
     }

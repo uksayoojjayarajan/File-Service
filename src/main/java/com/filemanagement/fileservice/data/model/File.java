@@ -8,11 +8,13 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
-@Entity
+@Document(collection = "file")
 public class File {
     @Id
     private String fileId;
@@ -22,8 +24,8 @@ public class File {
     @Lob
     @Size(max = 200 * 1024 * 1024, message = "File size must not exceed 200MB")
     private byte[] fileContent;
-    private LocalDate dateCreated;
-    private LocalDate dateUpdated;
+    private LocalDateTime dateCreated;
+    private LocalDateTime dateUpdated;
     private String fileType;
     private Long fileSize;
     private String fileLocation;

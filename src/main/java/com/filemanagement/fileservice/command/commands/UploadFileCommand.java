@@ -21,6 +21,6 @@ public class UploadFileCommand {
     private Long fileSize;
     private String userId;
     private String fileUrl; // S3 URL
-    private LocalDate dateCreated;
-    private LocalDate dateUpdated;
+    private LocalDateTime dateCreated;
+    private LocalDateTime dateUpdated;
 }
